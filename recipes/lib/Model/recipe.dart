@@ -2,13 +2,13 @@ class Recipe {
   String imgLabel;
   String imageUrl;
 
-  Recipe(this.imgLabel,this.imageUrl);
-    static List<Recipe> sample =
-    [
-      Recipe('assets/images/Pad Thai.webp', 'Pad Thai'),
-      Recipe('assets/images/Pad Thai pumpkin curry (gaeng fak thong).webp', 'Thai pumpkin curry (gaeng fak thong)'),
-      Recipe('assets/images/Pad Thai green fish curry.webp', 'Thai green fish curry'),
-      Recipe('assets/images/Pad Sweet Thai basil smash cocktail.webp', 'Sweet Thai basil smash cocktail'),
-      Recipe('assets/images/Pad Larb muang (Thai chopped pork salad).webp', 'Larb muang (Thai chopped pork salad)'),
-    ];
+  Recipe(this.imageUrl, this.imgLabel);
+
+static List<Recipe> samples = [
+  Recipe('assets/images/Thai-style corn cakes with pickled cucumbers.webp', 'Thai-style corn cakes with pickled cucumbers'),
+  Recipe('assets/images/Prawn massaman curry.webp', 'Prawn massaman curry'),
+  Recipe('assets/images/Thai green chicken curry.webp', 'Thai green chicken curry'),
+  Recipe('assets/images/Jackfruit massaman curry.webp', 'Jackfruit massaman curry'),
+  Recipe('assets/images/Beef massaman curry.webp', 'Beef massaman curry'),
+];
 }
