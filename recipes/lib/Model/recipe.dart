@@ -5,10 +5,10 @@ class Recipe {
   Recipe(this.imageUrl, this.imgLabel);
 
 static List<Recipe> samples = [
-  Recipe('assets/images/Thai-style corn cakes with pickled cucumbers.webp', 'Thai-style corn cakes with pickled cucumbers'),
-  Recipe('assets/images/Prawn massaman curry.webp', 'Prawn massaman curry'),
-  Recipe('assets/images/Thai green chicken curry.webp', 'Thai green chicken curry'),
-  Recipe('assets/images/Jackfruit massaman curry.webp', 'Jackfruit massaman curry'),
-  Recipe('assets/images/Beef massaman curry.webp', 'Beef massaman curry'),
+  Recipe('assets/images/E479071.webp', 'เสื้อเชิ้ต ผ้าเรยอน'),
+  Recipe('assets/images/E485148.webp', 'ชุดลำลอง Sanrio characters | แขนสั้น'),
+  Recipe('assets/images/Blouson.webp', 'เสื้อ Blouson ทรงสั้น มีซิป | ผ้าเดนิม'),
+  Recipe('assets/images/E481225.webp', 'เสื้อเชิ้ต ผ้าแฟลนเนล | ลายตาราง'),
+  Recipe('assets/images/E480740.webp', 'ยีนส์ ทรงโค้ง (Baggy Curve) | ความยาวพิเศษ - สั้นขึ้น 70 cm*'),
 ];
 }
