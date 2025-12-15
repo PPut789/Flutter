@@ -16,7 +16,7 @@ class RecipeApp extends StatelessWidget {
           centerTitle: true,
         ),
       ),
-      home: const MyHomePage(title: 'Uniqlo Shoppppp'),
+      home: const MyHomePage(title: 'Uniqlo Shop'),
     );
   }
 }
