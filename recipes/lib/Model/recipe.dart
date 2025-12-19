@@ -1,65 +1,15 @@
-import 'package:recipes/Model/ingredient.dart';
-
 class Recipe {
   String imgLabel;
   String imageUrl;
   String description;
-  List<Ingredient> Ingredients = [];
 
-
-  Recipe(this.imageUrl, this.imgLabel, this.description,this.Ingredients);
+  Recipe(this.imageUrl, this.imgLabel, this.description);
 
   static List<Recipe> samples = [
-  Recipe('assets/images/Green fish curry.webp', 'เสื้อโปโล ผ้าคอตตอน ลายทาง','เสื้อโปโล ผ้าคอตตอน ลายทาง ผ้าคอตตอน 100% ผ่านกรรมวิธีฟอกเพื่อให้สัมผัสสบายในลุคแคชชวล ลายทางกว้าง',
-  
-  [
-    Ingredient(name: 'Aubergines', quantity: 2, unit: ''),
-    Ingredient(name: 'Jungle curry paste', quantity: 2, unit: 'tbsp'),
-    Ingredient(name: 'Vegetable stock', quantity: 2, unit: 'cups'),
-    Ingredient(name: 'Kaffir lime leaves', quantity: 3, unit: ''),
-    Ingredient(name: 'Thai chilies', quantity: 2, unit: ''),
-    Ingredient(name: 'Fish sauce', quantity: 1, unit: 'tbsp'),
-    Ingredient(name: 'Thai basil', quantity: 1, unit: 'handful'),
-   ]),
-  Recipe('assets/images/Larb Muang.webp', 'เสื้อโปโลสเวตเตอร์ | แขนสั้น, ลายทาง','เสื้อโปโลสเวตเตอร์ | แขนสั้น, ลายทาง ทำจากผ้าคอตตอนเรยอนสัมผัสเรียบลื่น',
-  [
-    Ingredient(name: 'Aubergines', quantity: 2, unit: ''),
-    Ingredient(name: 'Jungle curry paste', quantity: 2, unit: 'tbsp'),
-    Ingredient(name: 'Vegetable stock', quantity: 2, unit: 'cups'),
-    Ingredient(name: 'Kaffir lime leaves', quantity: 3, unit: ''),
-    Ingredient(name: 'Thai chilies', quantity: 2, unit: ''),
-    Ingredient(name: 'Fish sauce', quantity: 1, unit: 'tbsp'),
-    Ingredient(name: 'Thai basil', quantity: 1, unit: 'handful'),
-   ]),
-  Recipe('assets/images/Pad Thai.webp', 'เสื้อโปโลสเวตเตอร์ | แขนสั้น','เสื้อโปโลสเวตเตอร์ | แขนสั้น ทำจากผ้าคอตตอนเรยอนสัมผัสเรียบลื่น ซักเครื่องได้',
-  [
-    Ingredient(name: 'Aubergines', quantity: 2, unit: ''),
-    Ingredient(name: 'Jungle curry paste', quantity: 2, unit: 'tbsp'),
-    Ingredient(name: 'Vegetable stock', quantity: 2, unit: 'cups'),
-    Ingredient(name: 'Kaffir lime leaves', quantity: 3, unit: ''),
-    Ingredient(name: 'Thai chilies', quantity: 2, unit: ''),
-    Ingredient(name: 'Fish sauce', quantity: 1, unit: 'tbsp'),
-    Ingredient(name: 'Thai basil', quantity: 1, unit: 'handful'),
-   ]),
-  Recipe('assets/images/Sweet thai basil smash cocktail.webp', 'เสื้อสเวตเตอร์ โปโล ผ้าถักลายนูน (Ribbed) แบบซักได้','เสื้อสเวตเตอร์ โปโล ผ้าถักลายนูน (Ribbed) แบบซักได้ สัมผัสนุ่มไม่ระคายผิว ดีไซน์ปกสกิปเปอร์ให้ลุคสวยเนี้ยบช่วงคอเมื่อสวมใส่ตัวเดียว',
-  [
-    Ingredient(name: 'Aubergines', quantity: 2, unit: ''),
-    Ingredient(name: 'Jungle curry paste', quantity: 2, unit: 'tbsp'),
-    Ingredient(name: 'Vegetable stock', quantity: 2, unit: 'cups'),
-    Ingredient(name: 'Kaffir lime leaves', quantity: 3, unit: ''),
-    Ingredient(name: 'Thai chilies', quantity: 2, unit: ''),
-    Ingredient(name: 'Fish sauce', quantity: 1, unit: 'tbsp'),
-    Ingredient(name: 'Thai basil', quantity: 1, unit: 'handful'),
-   ]),
-  Recipe('assets/images/Thai pumpkin curry.webp', 'เสื้อโปโล สเวตเตอร์ ผ้าถักลายนูน (Ribbed) แบบซักได้ | ลายทาง','เสื้อโปโล สเวตเตอร์ ผ้าถักลายนูน (Ribbed) แบบซักได้ ดีไซน์สกิปเปอร์หรูหราเพื่อให้ช่วงคอดูโฉบเฉี่ยว',
-  [
-    Ingredient(name: 'Aubergines', quantity: 2, unit: ''),
-    Ingredient(name: 'Jungle curry paste', quantity: 2, unit: 'tbsp'),
-    Ingredient(name: 'Vegetable stock', quantity: 2, unit: 'cups'),
-    Ingredient(name: 'Kaffir lime leaves', quantity: 3, unit: ''),
-    Ingredient(name: 'Thai chilies', quantity: 2, unit: ''),
-    Ingredient(name: 'Fish sauce', quantity: 1, unit: 'tbsp'),
-    Ingredient(name: 'Thai basil', quantity: 1, unit: 'handful'),
-   ]),
+  Recipe('assets/images/Green fish curry.webp', 'Green fish curry','Perk up your midweek meal with flaky chunks of fish cooked in creamy coconut milk and mild Thai green curry paste, ready in just 10 minutes.'),
+  Recipe('assets/images/Larb Muang.webp', 'Larb Muang','Experience bold Thai flavours with Larb Muang, a vibrant chopped pork salad bursting with garlic, crispy shallots and spiced chillies. Perfect for sharing, this easy dish is served hot with sticky rice or lettuce cups.'),
+  Recipe('assets/images/Pad Thai.webp', 'Pad Thai','Put juicy king prawns to work in our version of this classic Thai dish, full of vibrant flavours and ready in half an hour.'),
+  Recipe('assets/images/Sweet thai basil smash cocktail.webp', 'Sweet thai basil smash cocktail.webp','Make your own sweet Thai basil smash cocktai invented by the folk at Rosas Thai cafe in London. All you need is an egg white, lemon juice, Thai basil, sugar syrup and a lot of booze.'),
+  Recipe('assets/images/Thai pumpkin curry.webp', 'Thai pumpkin curry','Make the most of seasonal pumpkins or butternut squash in this Thai curry, flavoured with dill, fish sauce and homemade red and green chilli paste.'),
 ];
 }

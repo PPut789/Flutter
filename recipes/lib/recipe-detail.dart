@@ -1,19 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:recipes/Model/recipe.dart';
-import 'package:recipes/Model/ingredient.dart';
- 
-class RecipeDetail extends StatefulWidget {
+import 'package:reciepes/Model/recipe.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class RecipeDetail extends StatelessWidget {
   final Recipe recipe;
+ 
   const RecipeDetail({super.key, required this.recipe});
- 
-  @override
-  State<StatefulWidget> createState() {
-    return _RecipeDetailState();
-  }
-}
- 
-class _RecipeDetailState extends State<RecipeDetail> {
-  int sliderVal = 1;
  
   @override
   Widget build(BuildContext context) {
@@ -22,61 +14,23 @@ class _RecipeDetailState extends State<RecipeDetail> {
       body: Center(
         child: Column(
           children: <Widget>[
-            SizedBox(
-              width: 320,
-              height: 180,
-              child: Image(
-               image: AssetImage(widget.recipe.imageUrl),
-               fit: BoxFit.cover,
-             ),
-          ),
+            Image(image: AssetImage(recipe.imageUrl)),
             const SizedBox(height: 14.0),
             Text(
-              widget.recipe.imgLabel,
+              recipe.imgLabel,
               style: const TextStyle(
-                fontSize: 15.0,
+                fontSize: 20.0,
                 fontWeight: FontWeight.w700,
                 fontFamily: 'Palatino',
               ),
             ),
             const SizedBox(height: 14.0),
             Text(
-              widget.recipe.description,
-              style: const TextStyle(
-                fontSize: 15.0,
+              recipe.description,
+              style: GoogleFonts.kanit(
+                fontSize: 20.0,
                 fontWeight: FontWeight.w700,
-                fontFamily: 'Palatino',
               ),
-            ),
- 
-            Expanded(
-              child: ListView.builder(
-                itemBuilder: (BuildContext context, int index) {
-                  // 2 tps salt
-                  final ingredient = widget.recipe.Ingredients[index];
-                  final adjustQauntity = widget.recipe.Ingredients[index].quantity * sliderVal;
-                  return Text(
-                    '${adjustQauntity} ${ingredient.unit} ${ingredient.name}',
-                    style: const TextStyle(
-                      fontSize: 15.0,
-                    ),
-                  );
-                },
-                itemCount: widget.recipe.Ingredients.length,
-              ),
-            ),
- 
-            Slider(
-              min: 1,
-              max: 10,
-              divisions: 10,
-              label: '${(sliderVal)} servings',
-              value: sliderVal.toDouble(),
-              onChanged: (newValue) {
-                setState(() {
-                  sliderVal = newValue.round();
-                });
-              },
             ),
           ],
         ),
