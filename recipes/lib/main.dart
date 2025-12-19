@@ -1,60 +1,82 @@
 import 'package:flutter/material.dart';
 import 'package:recipes/Model/recipe.dart';
-
+import 'package:recipes/recipe-detail.dart';
+ 
 void main() {
   runApp(const RecipeApp());
 }
-
+ 
 class RecipeApp extends StatelessWidget {
   const RecipeApp({super.key});
-
+ 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        appBarTheme: const AppBarTheme(
-          centerTitle: true,
-        ),
-      ),
-      home: const MyHomePage(title: 'Uniqlo Shop'),
+      theme: ThemeData(appBarTheme: const AppBarTheme(centerTitle: true)),
+      home: const MyHomePage(title: 'Recipe Detail'),
     );
   }
 }
-
-
+ 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
   final String title;
-
+ 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
-
+ 
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-   
     return Scaffold(
       appBar: AppBar(title: Text(widget.title)),
-      body: SafeArea(child: Container(
-              child: ListView.builder(
-                itemBuilder: (BuildContext context, int index) {
-                  return buildRecipeCard(Recipe.samples[index]);
+      body: SafeArea(
+        child: Container(
+          child: ListView.builder(
+            itemBuilder: (BuildContext context, int index) {
+              return GestureDetector(
+                onTap: () {
+                  print('You Tapped on ${Recipe.samples[index].imgLabel}');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return RecipeDetail(recipe: Recipe.samples[index]);
+                      },
+                    ),
+                  );
                 },
-                itemCount: Recipe.samples.length
-              ),
-            )),
-        );
+                child: buildRecipeCard(Recipe.samples[index]),
+              );
+            },
+            itemCount: Recipe.samples.length,
+          ),
+        ),
+      ),
+    );
   }
-
-
+ 
   Widget buildRecipeCard(Recipe recipe) {
     return Card(
-      child: Column(
-        children: <Widget> [
-          Image(image: AssetImage(recipe.imageUrl)),
-          Text(recipe.imgLabel),
-        ],
+      elevation: 2.0,
+      shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: <Widget>[
+            Image(image: AssetImage(recipe.imageUrl)),
+            const SizedBox(height: 14.0),
+            Text(
+              recipe.imgLabel,
+              style: const TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.w500,
+                fontFamily: 'Palatino',
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
