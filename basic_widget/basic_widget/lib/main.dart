@@ -1,8 +1,10 @@
+import 'package:basic_widget/rating.dart';
 import 'package:flutter/material.dart';
  
 void main() {
-  runApp(const MainApp());
+  runApp(Rating());
 }
+
 
  
 class MainApp extends StatelessWidget {
