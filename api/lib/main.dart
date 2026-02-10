@@ -39,6 +39,7 @@ class _MovieListScreenState extends State<MovieListScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Popular Movies'),
+        backgroundColor: Colors.orange.shade300,
       ),
       body: FutureBuilder<List<Movie>>(
         future: movies,
