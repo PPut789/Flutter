@@ -36,7 +36,7 @@ class Card3 extends StatelessWidget {
         ),
         child: Container(
           decoration: BoxDecoration(
-            color: Colors.black.withOpacity(0.55), // dark overlay
+            color: Colors.black.withOpacity(0.55), 
             borderRadius: BorderRadius.circular(12),
           ),
           child: Padding(
@@ -44,9 +44,6 @@ class Card3 extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // =======================
-                // Top bar
-                // =======================
                 Row(
                   children: const [
                     Icon(
@@ -58,9 +55,6 @@ class Card3 extends StatelessWidget {
                 ),
                 const SizedBox(height: 12),
 
-                // =======================
-                // Title
-                // =======================
                 const Text(
                   'Recipe Trends',
                   style: TextStyle(
@@ -72,9 +66,6 @@ class Card3 extends StatelessWidget {
 
                 const SizedBox(height: 16),
 
-                // =======================
-                // Chips
-                // =======================
                 Wrap(
                   spacing: 10,
                   runSpacing: 10,

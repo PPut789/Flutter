@@ -29,9 +29,6 @@ class Card2 extends StatelessWidget {
         ),
         child: Stack(
           children: [
-            // =======================
-            // Author row (NO WHITE BOX)
-            // =======================
             Positioned(
               top: 16,
               left: 16,
@@ -73,9 +70,6 @@ class Card2 extends StatelessWidget {
               ),
             ),
 
-            // =======================
-            // Vertical text (LEFT)
-            // =======================
             Positioned(
               left: 8,
               bottom: 90,
@@ -92,9 +86,6 @@ class Card2 extends StatelessWidget {
               ),
             ),
 
-            // =======================
-            // Footer text (BOTTOM RIGHT)
-            // =======================
             Positioned(
               bottom: 16,
               right: 16,
